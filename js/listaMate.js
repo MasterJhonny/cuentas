@@ -69,17 +69,20 @@ class ListaMate {
         let secId = this.valor.next()
         saliadaCard.innerHTML += `
         <div class="tabla__section" id="tabla${secId.value}">
-        <h3 class="tabla__section--title"><b>${name}</b>&nbsp;<span class="btn config" id="newItem${secId.value}">New Item</span></h3>
-        <label class="item__material">
-        <span class="item__material--span">Nombre</span>
-        <span class="item__material--span">Medida</span>
-        <span class="item__material--span">costo</span>
-        </label>
+            <h3 class="tabla__section--title"><b>${name}</b>&nbsp;<span class="btn config" id="newItem${secId.value}">New Item</span></h3>
+                <label class="item__material">
+                <span class="item__material--span">Nombre</span>
+                <span class="item__material--span">Medida</span>
+                <span class="item__material--span">costo</span>
+                <span class="item__material--span">cantidad</span>
+                <span class="item__material--span">total</span>
+            </label>
         </div>
         `
         return secId.value;
     }
-        // function create new section
+
+    // function create new section
     createNewSection(modal) {
         let nombreSec = document.getElementById("nombreSec");
         let type = document.getElementById("type");
@@ -96,31 +99,25 @@ class ListaMate {
         this.body.classList.toggle("body");
     }
 
+    // function add eventos
     createNewsSection(modal) {
         let crearSec = document.getElementById('crearSec');
         crearSec.onclick = () => {
             this.createNewSection(modal)
         }
     }
+
+    // function for validar name of the list
     validarSecName(nameSec){
         let nombres = this.sections.filter(item => item.name === nameSec);
         return nombres[0];
     }
 
+    // function que hability the creation of new items
     observer(){
         this.sections.forEach(list => {
             list._ini()
         })
     }
-    // newItem(){
-        
-    //     section.newItem(typeSec, nameItem, medidaItem, costoItem);
-    // }
-    // deteleItem(nameSec, nameItem){
-    //     let section = this.validarSecName(nameSec);
-    //     section.deteleItem(nameItem);
-    // }
-
-
 }
 export default ListaMate;

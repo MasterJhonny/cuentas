@@ -48,7 +48,7 @@ body {
 }
 /* style of entrada de cine */
 .main__entrada--card {
-    width: 90%;
+    width: 100%;
     margin: 10px;
     padding: 10px;
     display: flex;
@@ -86,7 +86,7 @@ body {
 .salida__card {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     margin: 10px 0;
 }
 .entrada__card--title {
@@ -137,7 +137,7 @@ body {
 
 .item__material {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
 .item__material--span {
     padding: 5px 15px;

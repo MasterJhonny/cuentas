@@ -27,19 +27,6 @@ const spanCreate = (text) => {
     return span;
 }
 
-// action of function of click
-const newItem2 = () => {
-    wienModal(modal2);
-}
-// eventos btns
-// config.onclick = () => {
-//     wienModal(modal1)
-// }
 
-// cerrar1.onclick = () => {
-//     cerrarModal(modal1)
-// }
 
-cerrar2.onclick = () => {
-    cerrarModal(modal2);
-}
+
